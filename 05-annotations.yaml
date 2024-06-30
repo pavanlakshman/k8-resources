@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: annotations
+  labels:
+    course: DevOps_with_cloud
+  annotations:
+    kubernetes.io/created-by: pavan
+    jenkins.build.url: 'https://jenkins.pavandevops.online/expense/job/backend/54/'
+spec:
+  containers:
+  - name: nginx
+    image: nginx

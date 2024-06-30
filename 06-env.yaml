@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: environment
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  env:
+  - name: Devops_with_aws
+    value: kubernetes
+  - name: duration
+    value: '200hours'
