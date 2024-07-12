@@ -15,7 +15,7 @@ kind: Pod
 metadata:
   name: nginx-dynamic
   labels:
-    purpose: ebs-static
+    purpose: ebs-dynamic
     project: expense
 spec:
   containers:
@@ -25,7 +25,7 @@ spec:
     - name: persistent-storage
       mountPath: /usr/share/nginx/html
   nodeSelector:
-    topology.kubernetes.io/zone: us-east-1f
+    topology.kubernetes.io/zone: us-east-1a
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
