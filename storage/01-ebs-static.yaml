@@ -6,11 +6,11 @@ spec:
   accessModes:
   - ReadWriteOnce
   capacity:
-    storage: 100Gi
+    storage: 50Gi
   csi:
     driver: ebs.csi.aws.com
     fsType: ext4
-    volumeHandle: vol-06149f17ee67bc128
+    volumeHandle: vol-0af246537170fd0f9
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
