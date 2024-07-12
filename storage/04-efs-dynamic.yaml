@@ -33,8 +33,10 @@ kind: Service
 metadata:
   name: efs-dynamic
 spec:
+  type: LoadBalancer
   selector:
-    purpose: efs-dynamic
+    purpose: ebs-dynamic
+    project: expense
   ports:
   - protocol: TCP
     port: 80 #service-port
