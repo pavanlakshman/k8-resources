@@ -15,7 +15,7 @@ kind: Pod
 metadata:
   name: nginx-dynamic
   labels:
-    purpose: ebs-dynamic
+    purpose: ebs-static
     project: expense
 spec:
   containers:
@@ -31,16 +31,3 @@ spec:
     persistentVolumeClaim:
       claimName: ebs-dynamic
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx-lb
-spec:
-  type: LoadBalancer
-  selector:
-    purpose: ebs-dynamic
-    project: expense
-  ports:
-  - protocol: TCP
-    port: 80 #service-port
-    targetPort: 80
